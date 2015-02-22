@@ -11,7 +11,7 @@ namespace TestFacility
          * 
          * In real apps we must use library sorting method Array.Sort(Array array);
          */
-        static public long[] gnomeSort(long[] arrToSort)
+        public static long[] gnomeSort(long[] arrToSort)
         {
             int i = 0;
             int arrCount = arrToSort.Length;
@@ -37,7 +37,7 @@ namespace TestFacility
          * Gets data recieved from richTextBox element, splits lines into array, removes useless elements 
          * and returns array of long integer elements.
          */
-        static public long[] parseRichTextBoxData(String inputText)
+        public static long[] parseRichTextBoxData(String inputText)
         {
             //List<long> unsortedList = new List<long>();
             long[] unsortedList = new long[] { };
@@ -69,7 +69,7 @@ namespace TestFacility
          * 
          * Instead of this in real apps we must use library searching method Array.Exists() or Linq Contains()
          */
-        static public bool isItemInArray(long needle, long[] haystack)
+        public static bool isItemInArray(long needle, long[] haystack)
         {
             foreach (int item in haystack)
             {
@@ -81,11 +81,11 @@ namespace TestFacility
 
             return false;
         }
-        
+
         /**
          * Gets summ of array items
          */
-        static public int getArrayItemsSumm(int[] arr)
+        public static int getArrayItemsSumm(int[] arr)
         {
             int count = arr.Length;
             int summ = 0;
@@ -103,10 +103,10 @@ namespace TestFacility
          * 
          * In real apps it is preferable to use List
          */
-        static public int[] getNumbers()
+        public static int[] getNumbers()
         {
             //List<int> numbers = new List<int>();
-            int[] numbers = new int[] {};
+            int[] numbers = new int[] { };
             int j = 0;
 
             for (int i = 3; i <= 1000; i++)
@@ -146,7 +146,7 @@ namespace TestFacility
                 {
                     singleton = arr[i];
                     break;
-                } 
+                }
             }
 
             return singleton;
